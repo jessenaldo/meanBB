@@ -1,0 +1,53 @@
+<a href="#/dashboard">Cancel</a>
+
+<h1>Put the question and options here:</h1>
+<form name="pollForm">
+
+<div ng-show="pollForm.$submitted || pollForm.question.$touched">
+	<div ng-messages="pollForm.question.$error">
+		<div ng-message="required">You did not enter a question</div>
+		<div ng-message="minlength">Your field is too short</div>
+	</div>
+</div>
+
+Question: <input type="text" name="question" ng-model="newpollCtrl.newPoll.question" required ng-minlength=8>
+
+<div ng-show="pollForm.$submitted || pollForm.option1.$touched">
+	<div ng-messages="pollForm.option1.$error">
+		<div ng-message="required">You did not enter an option1</div>
+		<div ng-message="minlength">Your field is too short</div>
+	</div>
+</div>
+
+
+Option 1: <input type="text" name="option1" ng-model="newpollCtrl.newPoll.option1" required ng-minlength=3>
+
+<div ng-show="pollForm.$submitted || pollForm.option2.$touched">
+	<div ng-messages="pollForm.option2.$error">
+		<div ng-message="required">You did not enter an option2</div>
+		<div ng-message="minlength">Your field is too short</div>
+	</div>
+</div>
+
+Option 2: <input type="text" name="option2" ng-model="newpollCtrl.newPoll.option2" required ng-minlength=3>
+
+<div ng-show="pollForm.$submitted || pollForm.option3.$touched">
+	<div ng-messages="pollForm.option3.$error">
+		<div ng-message="required">You did not enter an option3</div>
+		<div ng-message="minlength">Your field is too short</div>
+	</div>
+</div>
+
+
+Option 3: <input type="text" name="option3" ng-model="newpollCtrl.newPoll.option3" required ng-minlength=3>
+
+<div ng-show="pollForm.$submitted || pollForm.option4.$touched">
+	<div ng-messages="pollForm.option4.$error">
+		<div ng-message="required">You did not enter an option4</div>
+		<div ng-message="minlength">Your field is too short</div>
+	</div>
+</div>
+
+Option 4: <input type="text" name="option4" ng-model="newpollCtrl.newPoll.option4" required ng-minlength=3>
+<input ng-disabled="pollForm.$invalid" type="submit" value="Create Poll" ng-click="newpollCtrl.createPoll()"/>
+</form>

@@ -1,0 +1,28 @@
+
+<a href="#/logout">Logout</a>
+<a href="#/new">Create a new Poll</a>
+
+<h1>Current Polls</h1>
+
+
+Search Polls: <input type="text" ng-model="pollFilter">
+
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Survey Question</th>
+		<th>Date Posted</th>
+		<th>Action</th>
+	</tr>
+	<tr ng-repeat="poll in dashboardCtrl.polls | filter:pollFilter">
+		<td><span ng-bind="poll.name"></span></td>
+		<td><a href="#/show/{{poll._id}}"><span ng-bind="poll.question"></span></a></td>
+		<td><span ng-bind="poll.date_posted | date: 'MMM dd, yyyy'"></span></td>
+		<td ng-if="poll.name == dashboardCtrl.user"><a href ng-click="dashboardCtrl.deletePoll(poll)">Delete</a></td>
+	</tr>
+
+
+
+
+
+

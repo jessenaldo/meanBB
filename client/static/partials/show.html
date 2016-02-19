@@ -1,0 +1,35 @@
+
+
+<a href='#/dashboard'>Go To Polls</a>
+
+<h1><span ng-bind="showpollCtrl.poll.question"></span></h1>
+
+<h3>Click the Vote button to choose one</h3>
+
+<table>
+	<tr>
+		<th>Option</th>
+		<th>Current Count of Votes</th>
+		<th>Action</th>
+	</tr>
+	<tr>
+		<td><span ng-bind="showpollCtrl.poll.option1[0].name"></span></td>
+		<td><span ng-bind="showpollCtrl.poll.option1[0].votes"></span></td>
+		<td><input type="submit" value="Vote" ng-click="showpollCtrl.voteOption1()"></td>
+	</tr>
+	<tr>
+		<td><span ng-bind="showpollCtrl.poll.option2[0].name"></span></td>
+		<td><span ng-bind="showpollCtrl.poll.option2[0].votes"></span></td>
+		<td><input type="submit" value="Vote" ng-click="showpollCtrl.voteOption2()"></td>
+	</tr>
+	<tr>
+		<td><span ng-bind="showpollCtrl.poll.option3[0].name"></span></td>
+		<td><span ng-bind="showpollCtrl.poll.option3[0].votes"></span></td>
+		<td><input type="submit" value="Vote" ng-click="showpollCtrl.voteOption3()"></td>
+	</tr>
+	<tr>
+		<td><span ng-bind="showpollCtrl.poll.option4[0].name"></span></td>
+		<td><span ng-bind="showpollCtrl.poll.option4[0].votes"></span></td>
+		<td><input type="submit" value="Vote" ng-click="showpollCtrl.voteOption4()"></td>
+	</tr>
+</table>
